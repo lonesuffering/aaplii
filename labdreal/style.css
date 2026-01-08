@@ -1,0 +1,127 @@
+/* Основные стили */
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease;
+    background: url('https://files.oaiusercontent.com/file-UzXDbWKyewzrNOrEMPEXvRT5?se=2024-11-15T17%3A17%3A20Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Da8d836bd-f2e1-49e3-86d7-b04257a09b22.webp&sig=8PcaCaHCWVZQhfixrM06X6OxzE/lXOLJBb79CQ16MlE%3D') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 450px;
+    text-align: center;
+    background: rgba(111, 111, 111, 0.85); /* ciemnoszary z przezroczystością */
+    color: #fff; /* zmiana koloru tekstu na biały dla lepszej czytelności */
+}
+
+
+/* Стили для различных температур */
+.cold {
+    background: linear-gradient(to bottom, #00BFFF, #1E90FF);
+}
+
+.cool {
+    background: linear-gradient(to bottom, #90EE90, #32CD32);
+}
+
+.warm {
+    background: linear-gradient(to bottom, #FFD700, #FF8C00);
+}
+
+.hot {
+    background: linear-gradient(to bottom, #FF4500, #FF6347);
+}
+
+/* Остальные элементы */
+#city, #weatherBtn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    border-radius: 8px;
+}
+
+#city {
+    border: 2px solid #333;
+    font-size: 16px;
+}
+
+#weatherBtn {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+    background-color: #3e3e3e;
+}
+
+.cold #weatherBtn {
+    background-color: #1E90FF;
+}
+
+.cool #weatherBtn {
+    background-color: #32CD32;
+}
+
+.warm #weatherBtn {
+    background-color: #FF8C00;
+}
+
+.hot #weatherBtn {
+    background-color: #FF4500;
+}
+
+#weatherBtn:hover {
+    opacity: 0.9;
+}
+
+h2 {
+    color: #ffffff;
+    margin: 20px 0 10px;
+}
+
+.weather-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.weather-item img {
+    width: 50px;
+    height: 50px;
+}
+
+.weather-details {
+    flex: 1;
+    text-align: left;
+    margin-left: 10px;
+}
+
+.weather-details p {
+    margin: 5px 0;
+}
+
+.temperature-change {
+    font-size: 24px;
+}
+
+.temperature-change.up {
+    color: green;
+}
+
+.temperature-change.down {
+    color: red;
+}
